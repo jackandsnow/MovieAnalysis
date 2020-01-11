@@ -48,10 +48,10 @@ class UI_Form(object):
         self.horizontalLayout.addWidget(self.label)
         self.comboBox = QtWidgets.QComboBox(self.horizontalLayoutWidget)
         self.comboBox.setDuplicatesEnabled(False)
+        # 初始化下拉菜单项数
         self.comboBox.setObjectName("comboBox")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
+        for _ in movie_list:
+            self.comboBox.addItem("")
         self.horizontalLayout.addWidget(self.comboBox)
         self.pushButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.pushButton.setObjectName("pushButton")
@@ -128,7 +128,7 @@ class UI_Form(object):
         :param Form: QMainWindow
         """
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "开心麻花影视作品分析"))
+        Form.setWindowTitle(_translate("Form", "猫眼电影影评分析"))
         self.label.setText(_translate("Form", "选择电影："))
         for index, movie in enumerate(movie_list):
             self.comboBox.setItemText(index, _translate('Form', movie.get('name')))

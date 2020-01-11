@@ -12,7 +12,7 @@
         </property>
 
         <property name="windowTitle">
-            <string>开心麻花影视作品分析</string>
+            <string>猫眼电影影评分析</string>
         </property>
 
         <widget class="QWidget" name="horizontalLayoutWidget">
