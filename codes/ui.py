@@ -170,7 +170,7 @@ class UI_Form(object):
 
     def button_click(self):
         """
-        操作查看按钮
+        操作不同查看按钮
         """
         self.viewCommentNum.clicked.connect(self.view_main_city)
         self.viewHotMap.clicked.connect(self.view_hot_map)
@@ -258,18 +258,19 @@ class UI_Form(object):
         :param frame: 用来操作的数据, DataFrame
         """
         geo_map = Geo('《' + self.movie_name + '》 全国热力图',
-                      title_color="#fff",
-                      title_pos="center", width=1200,
-                      height=600, background_color='#404a59')
+                      title_color='#fff',
+                      title_pos='center', width=1800,
+                      height=900, background_color='#404a59')
         while True:
             try:
-                geo_map.add("", attr=frame['cityName'], value=frame['count'], type="heatmap",
-                            visual_range=[0, 50], visual_text_color="#fff",
-                            symbol_size=15, is_visualmap=True, is_roam=False)
+                geo_map.add('', attr=frame['cityName'], value=frame['count'],
+                            type='heatmap', maptype='china',
+                            visual_range=[0, 100], visual_text_color='#fff',
+                            symbol_size=15, is_visualmap=True)
                 break
             except ValueError as e:
                 # 去除不支持的城市名
-                city_name = str(e).split("No coordinate is specified for ")[1]
+                city_name = str(e).split('No coordinate is specified for ')[1]
                 frame = frame[frame['cityName'] != city_name]
 
         # 生成全国热力图html文件
