@@ -7,9 +7,6 @@ from codes.windows import HotMapWindows, WordCloudWindows
 
 # 主方法入口
 if __name__ == '__main__':
-    # 获取当前文件路径
-    # d = os.path.dirname(os.path.realpath(sys.argv[0])) + "/"  # 获取当前文件所在路径
-    # d = re.sub(r'\\', '/', d)  # 将路径中的分隔符\替换为/
     # 实例化QApplication类
     app = QtWidgets.QApplication(sys.argv)
     main_win = QtWidgets.QMainWindow()
