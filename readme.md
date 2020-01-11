@@ -1,6 +1,6 @@
 # Movie Analysis
 
-**本项目主要是对猫眼电影进行影评分析。**
+**本项目主要是对猫眼电影进行影评分析，关于更详细的博客介绍请点击[**这里**](https://jackandsnow.github.io/2020-01-08/movie-analysis/)。**
 
 ## 1. 需求分析
 （1）可以选择电影；
@@ -30,3 +30,6 @@
 （5）第三方模块：pandas、scipy、jieba、wordcloud、matplotlib、imageio、PyQt5、pyqt5-tools、pyecharts、echarts-china-counties-pypkg、echarts-china-provinces-pypkg、echarts-china-cities-pypkg。
 
 **版本要求：PyQt5 <= 5.10.1, pyecharts <= 0.5.11**
+
+## 4. 声明
+本项目所有代码仅供学习参考使用。
